@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- Material Design Lite -->
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.indigo-pink.min.css">
+    <!-- Material Design icon font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="mdl-layout mdl-js-layout">
+        <header class="mdl-layout__header mdl-layout__header--waterfall">
+            <!-- Top row, always visible -->
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">Examen Final Web</span>
+                <div class="mdl-layout-spacer"></div>
+                
+               
+            </div>
+
+        </header>
+
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">Examen Final Web</span>
+            <nav class="mdl-navigation">
+                <a href="~/contactos/Index" class="mdl-navigation__link">Contactos</a>
+                <a href="~/visita/Index" class="mdl-navigation__link">Visitas</a>
+
+                <hr />
+                
+            </nav>
+        </div>
+
+        <main class="mdl-layout__content">
+            <div class="mdl-grid page-content">
+                @RenderBody()
+            </div>
+        </main>
+
+        <footer class="mdl-mini-footer">
+            <div class="mdl-mini-footer--left-section">
+                <p>&copy; 2019 - Abel Encarnacion 20175530</p>
+            </div>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

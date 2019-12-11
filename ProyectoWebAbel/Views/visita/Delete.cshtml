@@ -1,0 +1,72 @@
+﻿@model ProyectoWebAbel.visita
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Visita | Borrar</h2>
+
+<div>
+
+    <hr />
+    <dl class="dl-horizontal"><br />
+        <h3>Estas seguro de que quieres borrar esto?</h3>
+        <dt>
+            @Html.DisplayNameFor(model => model.motivo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.motivo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hora_entrada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hora_entrada)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hora_salida)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hora_salida)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre_completo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre_completo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.contactos.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.contactos.nombre)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Borrar" class="btn btn-default" /> |
+            @Html.ActionLink("Volver a la lista", "Index")
+        </div>
+    }
+</div>

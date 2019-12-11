@@ -1,0 +1,66 @@
+﻿@model ProyectoWebAbel.visita
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Visita | Detalles</h2>
+
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.motivo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.motivo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hora_entrada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hora_entrada)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hora_salida)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hora_salida)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre_completo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre_completo)
+        </dd>
+
+        <dt>
+            <label>Nombre de Contacto</label>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.contactos.nombre)
+        </dd>
+        <p>
+            @Html.ActionLink("Editar", "Edit", new { id = Model.visitaId }) |
+            @Html.ActionLink("Volver a la lista", "Index")
+        </p>
+    </dl>
+</div>
+

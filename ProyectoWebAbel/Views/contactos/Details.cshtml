@@ -1,0 +1,51 @@
+﻿@model ProyectoWebAbel.contactos
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles | contactos</h2>
+
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.apellido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.apellido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.identidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.identidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fecha_creacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecha_creacion)
+        </dd>
+
+    </dl>
+    <p>
+        @Html.ActionLink("Editar", "Edit", new { id = Model.contactoId }) |
+        @Html.ActionLink("Volver a la lista", "Index")
+    </p>
+</div>
+

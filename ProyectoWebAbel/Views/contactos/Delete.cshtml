@@ -1,0 +1,57 @@
+﻿@model ProyectoWebAbel.contactos
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Borrar | contactos </h2> <br />
+
+<div>
+  
+    <hr />
+    <dl class="dl-horizontal">
+        <br />
+        <h3>Seguro que quieres borrar esto?</h3>
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.apellido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.apellido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.identidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.identidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fecha_creacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecha_creacion)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Borrar" class="btn btn-default" /> |
+            @Html.ActionLink("Volver a la lista", "Index")
+        </div>
+    }
+</div>

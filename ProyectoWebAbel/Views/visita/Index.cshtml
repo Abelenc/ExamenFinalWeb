@@ -1,0 +1,64 @@
+﻿@model IEnumerable<ProyectoWebAbel.visita>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Crear nuevo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.motivo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hora_entrada)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hora_salida)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre_completo)
+        </th>
+        <th>
+            <label>Nombre de Contacto</label>
+            @*@Html.DisplayNameFor(model => model.contactos.nombre)*@
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.motivo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fecha)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hora_entrada)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hora_salida)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre_completo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.contactos.nombre)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.visitaId }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.visitaId }) |
+            @Html.ActionLink("Borrar", "Delete", new { id=item.visitaId })
+        </td>
+    </tr>
+}
+
+</table>
